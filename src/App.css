@@ -44,51 +44,43 @@ main{
 
 /* ================= NAVBAR ================= */
 
-.navbar{
-    background:#3b2418 !important;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-    padding:15px 8%;
+.navbar{ 
+    width:100%;
+    display:flex; 
+    justify-content:space-between; 
+    align-items:center; 
+    padding:18px 8%; 
+    background:#3b2418; 
+    color:#fff; 
+    box-shadow:0 5px 15px rgba(0,0,0,.15); 
+    position:sticky; top:0; z-index:1000; 
+}
+.navbar h2{ 
+    display:flex; 
+    align-items:center; 
+    gap:10px; 
+    font-size:2rem; 
+    color:#ffcc80; 
+} 
+.navbar div{ 
+    display:flex; 
+    align-items:center; 
+    gap:30px; 
+} 
+.navbar a{ 
+    color:#fff; 
+    padding:8px 15px; 
+    border-radius:8px; 
+    transition:.3s; 
+    font-size:18px; 
+    text-decoration: none; 
+} 
+.navbar a:hover{ 
+    background:#ffcc80; 
+    color:#3b2418; 
 }
 
-.navbar-brand{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-size:2rem !important;
-    font-weight:700;
-    color:#ffcc80 !important;
-}
-
-.navbar-brand:hover{
-    color:#ffd699 !important;
-}
-
-.navbar-nav{
-    gap:20px;
-}
-
-.nav-link{
-    color:#fff !important;
-    font-size:18px;
-    padding:8px 15px !important;
-    border-radius:8px;
-    transition:.3s;
-}
-
-.nav-link:hover,
-.nav-link.active{
-    background:#ffcc80;
-    color:#3b2418 !important;
-}
-
-.navbar-toggler{
-    border:none !important;
-}
-
-.navbar-toggler:focus{
-    box-shadow:none !important;
-}
-/* ================= HOME ================= */
+ /* ================= HOME ================= */
 
 .home{
     min-height:calc(100vh - 78px);
@@ -265,206 +257,205 @@ button:hover{
 
 /* ================= TABLET ================= */
 
-@media(max-width:992px){
+@media (max-width: 992px) {
 
-.navbar{
+    .navbar{
+        padding:16px 5%;
+    }
 
-    padding:18px 5%;
-}
+    .navbar h2{
+        font-size:1.8rem;
+    }
 
-.home h1{
+    .navbar div{
+        gap:20px;
+    }
 
-    font-size:3rem;
-}
+    .navbar a{
+        font-size:17px;
+    }
 
-.menu{
+    .home h1{
+        font-size:3rem;
+    }
 
-    padding:50px 5%;
-}
+    .home p{
+        font-size:1.2rem;
+    }
 
-.contact{
+    .menu{
+        padding:50px 5%;
+    }
 
-    width:95%;
-}
+    .menu h2{
+        font-size:2.5rem;
+    }
 
+    .menu-items{
+        gap:25px;
+    }
+
+    .menu-item img{
+        height:220px;
+    }
+
+    .contact{
+        width:95%;
+        padding:35px;
+    }
+
+    .contact h2{
+        font-size:2.2rem;
+    }
+
+    .footer{
+        font-size:15px;
+    }
 }
 
 /* ================= MOBILE ================= */
 
-@media(max-width:768px){
+@media (max-width: 768px) {
 
-.navbar{
+    .navbar{
+        flex-direction:column;
+        align-items:center;
+        gap:15px;
+        padding:15px;
+        text-align:center;
+    }
 
-    flex-direction:column;
+    .navbar h2{
+        font-size:1.7rem;
+    }
 
-    gap:15px;
+    .navbar div{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:15px;
+    }
 
-    text-align:center;
-}
+    .navbar a{
+        font-size:16px;
+        padding:8px 12px;
+    }
 
-.navbar h2{
+    .home{
+        min-height:80vh;
+        padding:20px;
+    }
 
-    font-size:1.8rem;
-}
+    .home h1{
+        font-size:2.4rem;
+    }
 
-.navbar div{
+    .home p{
+        font-size:1rem;
+    }
 
-    flex-wrap:wrap;
+    .menu{
+        padding:40px 20px;
+    }
 
-    justify-content:center;
+    .menu h2{
+        font-size:2rem;
+    }
 
-    gap:15px;
-}
+    .menu-items{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
 
-.navbar a{
+    .menu-item img{
+        height:220px;
+    }
 
-    font-size:16px;
-}
+    .contact{
+        width:90%;
+        padding:25px;
+        margin:40px auto;
+    }
 
-.home{
+    .contact h2{
+        font-size:2rem;
+    }
 
-    min-height:80vh;
-}
-
-.home h1{
-
-    font-size:2.3rem;
-}
-
-.home p{
-
-    font-size:1rem;
-}
-
-.menu{
-
-    padding:40px 20px;
-}
-
-.menu h2{
-
-    font-size:2rem;
-}
-
-.menu-item img{
-
-    height:220px;
-}
-
-.contact{
-
-    width:90%;
-
-    padding:25px;
-
-    margin:40px auto;
-}
-
-.contact h2{
-
-    font-size:2rem;
-}
-
-.footer{
-
-    font-size:14px;
-}
-
+    .footer{
+        font-size:14px;
+        padding:15px;
+    }
 }
 
 /* ================= SMALL MOBILE ================= */
 
-@media(max-width:480px){
-
-.navbar h2{
-
-    font-size:1.5rem;
-}
-
-.navbar div{
-
-    flex-direction:column;
-
-    gap:10px;
-}
-
-.home h1{
-
-    font-size:2rem;
-}
-
-.home p{
-
-    font-size:.9rem;
-}
-
-.menu h2{
-
-    font-size:1.8rem;
-}
-
-.card-title{
-
-    font-size:1.3rem;
-}
-
-.card-text{
-
-    font-size:1.1rem;
-}
-
-.contact{
-
-    width:95%;
-
-    padding:20px;
-}
-
-button{
-
-    font-size:16px;
-}
-
-}
-@media(max-width:992px){
+@media (max-width: 480px) {
 
     .navbar{
-        padding:15px 5%;
+        padding:12px;
     }
 
-    .navbar-brand{
-        font-size:1.8rem !important;
+    .navbar h2{
+        font-size:1.5rem;
     }
 
-    .navbar-collapse{
-        margin-top:15px;
-    }
-
-    .navbar-nav{
+    .navbar div{
+        width:100%;
+        flex-direction:column;
         gap:10px;
     }
-}
 
-@media(max-width:768px){
-
-    .navbar-brand{
-        font-size:1.6rem !important;
-    }
-
-    .navbar-collapse{
-        background:#3b2418;
-        margin-top:12px;
-        padding:15px;
-        border-radius:12px;
+    .navbar a{
+        width:100%;
         text-align:center;
+        font-size:15px;
+        padding:10px;
     }
 
-    .navbar-nav{
-        gap:8px;
+    .home h1{
+        font-size:2rem;
     }
 
-    .nav-link{
-        margin:5px 0;
+    .home p{
+        font-size:0.9rem;
+    }
+
+    .menu{
+        padding:30px 15px;
+    }
+
+    .menu h2{
+        font-size:1.8rem;
+    }
+
+    .menu-item img{
+        height:200px;
+    }
+
+    .card-title{
+        font-size:1.3rem;
+    }
+
+    .card-text{
+        font-size:1.1rem;
+    }
+
+    .contact{
+        width:95%;
+        padding:20px;
+    }
+
+    .contact h2{
+        font-size:1.8rem;
+    }
+
+    button{
         font-size:16px;
+        padding:12px;
+    }
+
+    .footer{
+        font-size:13px;
     }
 }
