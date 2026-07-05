@@ -45,47 +45,49 @@ main{
 /* ================= NAVBAR ================= */
 
 .navbar{
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 8%;
-    background:#3b2418;
-    color:#fff;
+    background:#3b2418 !important;
     box-shadow:0 5px 15px rgba(0,0,0,.15);
-    position:sticky;
-    top:0;
-    z-index:1000;
+    padding:15px 8%;
 }
 
-.navbar h2{
+.navbar-brand{
     display:flex;
     align-items:center;
     gap:10px;
-    font-size:2rem;
-    color:#ffcc80;
+    font-size:2rem !important;
+    font-weight:700;
+    color:#ffcc80 !important;
 }
 
-.navbar div{
-    display:flex;
-    align-items:center;
-    gap:30px;
+.navbar-brand:hover{
+    color:#ffd699 !important;
 }
 
-.navbar a{
-    color:#fff;
-    padding:8px 15px;
+.navbar-nav{
+    gap:20px;
+}
+
+.nav-link{
+    color:#fff !important;
+    font-size:18px;
+    padding:8px 15px !important;
     border-radius:8px;
     transition:.3s;
-    font-size:18px;
-    text-decoration: none;
 }
 
-.navbar a:hover{
+.nav-link:hover,
+.nav-link.active{
     background:#ffcc80;
-    color:#3b2418;
+    color:#3b2418 !important;
 }
 
+.navbar-toggler{
+    border:none !important;
+}
+
+.navbar-toggler:focus{
+    box-shadow:none !important;
+}
 /* ================= HOME ================= */
 
 .home{
@@ -423,4 +425,46 @@ button{
     font-size:16px;
 }
 
+}
+@media(max-width:992px){
+
+    .navbar{
+        padding:15px 5%;
+    }
+
+    .navbar-brand{
+        font-size:1.8rem !important;
+    }
+
+    .navbar-collapse{
+        margin-top:15px;
+    }
+
+    .navbar-nav{
+        gap:10px;
+    }
+}
+
+@media(max-width:768px){
+
+    .navbar-brand{
+        font-size:1.6rem !important;
+    }
+
+    .navbar-collapse{
+        background:#3b2418;
+        margin-top:12px;
+        padding:15px;
+        border-radius:12px;
+        text-align:center;
+    }
+
+    .navbar-nav{
+        gap:8px;
+    }
+
+    .nav-link{
+        margin:5px 0;
+        font-size:16px;
+    }
 }

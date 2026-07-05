@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import{BrowserRouter, Routes, Route} from 'react-router-dom'
-import Navbar from './components/Navbar'
+import Navigation from './components/Navbar'
 import Home from './components/Home'
 import Menu from './components/Menu'
 import Contact from './components/Contact'
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="app">
     <BrowserRouter>
-      <Navbar />
+      <Navigation />
        <main>
       <Routes>
         <Route path="/" element={<Home />} />
