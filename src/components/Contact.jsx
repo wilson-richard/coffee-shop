@@ -3,90 +3,111 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 export default function Contact() {
-  const [validated, setValidated] = useState(false);
 
-  const handleSubmit = (event) => {
-    const form = event.currentTarget;
+  const [validated,setValidated]=useState(false);
 
-    if (!form.checkValidity()) {
+  const handleSubmit=(event)=>{
+
+    const form=event.currentTarget;
+
+    if(!form.checkValidity()){
+
       event.preventDefault();
       event.stopPropagation();
-    } else {
-      
-      alert("Form submitted successfully!");
+
+    }else{
+
+      event.preventDefault();
+
+      alert("Message Sent Successfully!");
+
     }
 
     setValidated(true);
+
   };
 
-  return (
-    <div className="contact">
-      <h2>Contact Us</h2>
+  return(
 
-      <Form
-        noValidate
-        validated={validated}
-        onSubmit={handleSubmit}
-      >
-        <Form.Group className="mb-3" controlId="formName">
-          <Form.Label>Name</Form.Label>
+    <section className="contact">
 
-          <Form.Control
-            required
-            type="text"
-            placeholder="Enter your name"
-          />
+      <div className="contact-box">
 
-          <Form.Control.Feedback>
-            Looks good!
-          </Form.Control.Feedback>
+        <h2>Contact Us</h2>
 
-          <Form.Control.Feedback type="invalid">
-            Please enter your name.
-          </Form.Control.Feedback>
-        </Form.Group>
+        <p>
+          We'd love to hear from you. Send us your questions,
+          feedback, or coffee orders.
+        </p>
 
-        <Form.Group className="mb-3" controlId="formEmail">
-          <Form.Label>Email</Form.Label>
+        <Form
+          noValidate
+          validated={validated}
+          onSubmit={handleSubmit}
+        >
 
-          <Form.Control
-            required
-            type="email"
-            placeholder="Enter your email"
-          />
+          <Form.Group className="mb-3">
 
-          <Form.Control.Feedback>
-            Looks good!
-          </Form.Control.Feedback>
+            <Form.Label>Name</Form.Label>
 
-          <Form.Control.Feedback type="invalid">
-            Please enter a valid email.
-          </Form.Control.Feedback>
-        </Form.Group>
+            <Form.Control
+              required
+              type="text"
+              placeholder="Enter your name"
+            />
 
-        <Form.Group className="mb-3" controlId="formMessage">
-          <Form.Label>Message</Form.Label>
+            <Form.Control.Feedback type="invalid">
+              Please enter your name.
+            </Form.Control.Feedback>
 
-          <Form.Control
-            required
-            as="textarea"
-            rows={3}
-            placeholder="Enter your message"
-          />
+          </Form.Group>
 
-          <Form.Control.Feedback>
-            Looks good!
-          </Form.Control.Feedback>
+          <Form.Group className="mb-3">
 
-          <Form.Control.Feedback type="invalid">
-            Please enter your message.
-          </Form.Control.Feedback>
-        </Form.Group>
+            <Form.Label>Email</Form.Label>
 
-        <Button type="submit" variant="dark" className="w-100">
-          Submit
-        </Button>
-      </Form>
-    </div>
+            <Form.Control
+              required
+              type="email"
+              placeholder="Enter your email"
+            />
+
+            <Form.Control.Feedback type="invalid">
+              Enter a valid email.
+            </Form.Control.Feedback>
+
+          </Form.Group>
+
+          <Form.Group className="mb-4">
+
+            <Form.Label>Message</Form.Label>
+
+            <Form.Control
+              required
+              as="textarea"
+              rows={5}
+              placeholder="Write your message"
+            />
+
+            <Form.Control.Feedback type="invalid">
+              Enter your message.
+            </Form.Control.Feedback>
+
+          </Form.Group>
+
+          <Button
+            type="submit"
+            className="submit-btn"
+          >
+            Send Message
+          </Button>
+
+        </Form>
+
+      </div>
+
+    </section>
+
   );
+
 }

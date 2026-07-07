@@ -4,7 +4,7 @@ import { FaCoffee } from "react-icons/fa";
 
 export default function Navigation() {
   return (
-    <Navbar expand="lg" className="custom-navbar" variant="dark" sticky="top">
+    <Navbar   expand="lg" sticky="top" variant="dark" collapseOnSelect className="custom-navbar">
       <Container>
 
         <Navbar.Brand as={Link} to="/" className="logo">
