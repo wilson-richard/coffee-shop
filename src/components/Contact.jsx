@@ -12,7 +12,7 @@ export default function Contact() {
       event.preventDefault();
       event.stopPropagation();
     } else {
-      event.preventDefault(); 
+      
       alert("Form submitted successfully!");
     }
 
